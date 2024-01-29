@@ -1,0 +1,38 @@
+/* Header CSS*/
+.navbar{
+    min-width: 255px;
+  }
+
+.navbar-brand {
+    max-width: 65%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.navbar-brand p1 {
+    flex: 1;
+    font-size: clamp(16px, 3vw, 24px);
+}
+
+.dropdown-menu .active{
+    background-color: #dc3545;
+    color: white;
+    border: whitesmoke;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s; /* Add transition for smooth effect */
+}
+
+.dropdown-menu .active:hover {
+    background-color:  #c82333; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+    text-decoration: none;
+    border: 1px solid  #c82333;
+}

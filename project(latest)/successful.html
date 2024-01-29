@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Payment Successful</title>
+    <link rel="icon" type="image/png" href="image/logo1.png">
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            width: 70%;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px; /* Increased padding for more space */
+            text-align: center;
+        }
+
+        .card h1 {
+            font-size: 32px; /* Larger font size for the heading */
+            color: #dc3545;
+        }
+
+        .btn {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 15px 30px; /* Increased padding for a bigger button */
+            font-size: 18px; /* Larger font size for the button */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1><strong>Payment Successful</strong></h1>
+        <a href="shopNow.html">
+            <button class="btn">Continue Shopping</button>
+        </a>
+    </div>
+
+    <!-- Import Script -->
+    <script src="cart.js"></script>
+    <script>
+      clearCart();
+    </script>
+</body>
+</html>

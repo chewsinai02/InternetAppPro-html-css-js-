@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="items.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href='https://fonts.googleapis.com/css?family=Varela Round' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+
+    <title>Snacks | HF Distributor(M) Sdn. Bhd.</title>
+    <link rel="icon" type="image/png" href="image/logo1.png">
+
+  </head>
+  <body>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="cart.js" defer></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+
+    <!--Header-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">
+        <img src="image/logo1.png">
+        <p1>HF Distributor(M) Sdn. Bhd.</p1>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutUs.html">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item active" href="shopNow.html">All Products</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="drinks.html">Drinks</a>
+              <a class="dropdown-item" href="snacks.html">Snacks</a>
+              <a class="dropdown-item" href="chocolate.html">Chocolate</a>
+              <a class="dropdown-item" href="instantnoodle.html">Instant Noodle</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" style="margin-right: 60px;">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+        <a class="navbar-brand" href="shoppingCart.html"><i class='bx bxs-cart'><span class="badge badge-pill badge-danger" id="cartItemCount">0</span></i></a>
+
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row" style="margin-top: 10px;">
+        <div class="col-md-2">
+          <div class="list-group">
+            <a href="shopNow.html" class="list-group-item list-group-item-action active">Category</a>
+            <a href="drinks.html" class="list-group-item list-group-item-action" style="color: black; text-decoration: none;">Drinks</a>
+            <a href="snacks.html" class="list-group-item list-group-item-action" style="color: black; text-decoration: none;">Snacks</a>
+            <a href="chocolate.html" class="list-group-item list-group-item-action" style="color: black; text-decoration: none;">Chocolate</a>
+            <a href="instantnoodle.html" class="list-group-item list-group-item-action" style="color: black; text-decoration: none;">Instant Noodle</a>
+          </div>
+          <br>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-8">
+          <div class="card border-0">
+            <h5 class="card-title">Products for Snacks</h5>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="product-title">GAN YUAN-C CACHEWNUTS 75G-MALA (75G)</h5>
+                    <img src="image/snacks/Product7.jpg" class="img-fluid" alt="">
+                    <div class="card-heading">RM9.00</div>
+                    <button class="btn btn-danger btn-xs" onclick="addToCart('GAN YUAN-C CACHEWNUTS MALA 甘源 蟹黄味腰豆(75G)', 9, 'image/snacks/Product7.jpg')">Add to Cart</button>
+                  </div>
+                </div><br>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="product-title">GAN YUAN-C SHRIMP STRIPS & BEANS SHRIMP FLV (75G)</h5>
+                    <img src="image/snacks/Product8.jpg" class="img-fluid" alt="">
+                    <div class="card-heading">RM9.00</div>
+                    <button class="btn btn-danger btn-xs" onclick="addToCart('GAN YUAN-C SHRIMP STRIPS & BEANS 75G-SHRIMP FLV 甘源 虾条豆果(75G)', 9, 'image/snacks/Product8.jpg')">Add to Cart</button>
+                  </div>
+                </div><br>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="product-title">GAN YUAN PEAS ORIGINAL TASTE (75G)</h5>
+                    <img src="image/snacks/Product9.jpg" class="img-fluid" alt="">
+                    <div class="card-heading">RM9.00</div>
+                    <button class="btn btn-danger btn-xs" onclick="addToCart('GAN YUAN PEAS ORIGINAL TASTE 甘源 原味青豌豆(75G)', 9, 'image/snacks/Product9.jpg')">Add to Cart</button>
+                  </div>
+                </div><br>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="product-title">GAN YUAN PROK FLOSS BROAD (75G)</h5>
+                    <img src="image/snacks/Product10.jpg" class="img-fluid" alt="">
+                    <div class="card-heading">RM9.00</div>
+                    <button class="btn btn-danger btn-xs" onclick="addToCart('GAN YUAN PROK FLOSS BROAD 甘源 肉松味蚕豆(75G)', 9, 'image/snacks/Product10.jpg')">Add to Cart</button>
+                  </div>
+                </div><br>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="product-title">GAN YUAN SUNFLOWER SEED CRAB ROE FLAVOUR (75G)</h5>
+                    <img src="image/snacks/Product11.jpg" class="img-fluid" alt="">
+                    <div class="card-heading">RM9.00</div>
+                    <button class="btn btn-danger btn-xs" onclick="addToCart('GAN YUAN SUNFLOWER SEED CRAB ROE FLAVOUR 甘源 蟹黄味瓜子仁(75G)', 9, 'image/snacks/Product11.jpg')">Add to Cart</button>
+                  </div>
+                </div><br>
+              </div>
+              <div class="col-md-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="product-title">GAN YUAN MA LA PEANUT (75G)</h5>
+                    <img src="image/snacks/Product12.jpg" class="img-fluid" alt="">
+                    <div class="card-heading">RM9.00</div>
+                    <button class="btn btn-danger btn-xs" onclick="addToCart('Gan Yuan Ma La Peanut 75g 甘源 麻辣花生(75G)', 9, 'image/snacks/Product12.jpg')">Add to Cart</button>
+                  </div>
+                </div><br>
+              </div>              
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+    <br>
+
+    <!--FOOTER-->
+    <footer style="padding: 3px; font-family: Varela Round;">
+      <div class="container-fluid">
+        <div class="card-group">
+            <div class="card" style="margin-bottom: 0;">
+              <div class="card-body">
+                <h5 class="card-title">HONG FONG GROUP TRADING</h5>
+                <p class="card-text">HONG FONG GROUP TRADING - Based in Johor, Malaysia, the company supplies beverage, breakfast cereal, candy, chocolate, cookie, instant noodle, popcorn, seaweed, tea, vinegar, etc.</p>
+              </div>
+            </div>
+            <div class="card" style="margin-bottom: 0;">
+              <div class="card-body">
+                <h5 class="card-title">Location</h5>
+                <p class="card-text">
+                  <a href="https://goo.gl/maps/FU5KYr4CThApwXEf9" style="color: white;">
+                  34a, Jalan Impian Emas 7, Taman Impian Emas, 81300 Skudai, Johor, Malaysia.
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div class="card" style="border-right: 0; margin-bottom: 0;">
+              <div class="card-body">
+                <h5 class="card-title">Contact Us</h5>
+                <p class="card-text">CS <a href="https://wa.me/60197556613" style="color: white;">+6019-755 6613</a>
+                <br>Wendy <a href="https://wa.me/60127676442" style="color: white;">+6012-767 6442</a>
+                <br><a href="https://wa.me/601139394343" style="color: white;">+6011-3939 4343</a>
+                <br><a href=mailto:info@hongfong.com.my style="color: white;">info@hongfong.com.my</a></p>
+                <div class="container-fluid"  style="border-top: 1px solid black;">
+                    <a href="https://www.facebook.com/hongfongjb" target="_blank">
+                      &nbsp;<i class='bx bxl-facebook-circle'></i>
+                    </a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <center style="font-family: 'Varela Round'; color: white; background-color: #dc3545;">
+          <br>
+          <p>
+            <i class='bx bx-copyright'>2020-2023</i> <span style="font-size: 20px;">HONG FONG GROUP TRADING</span> JM0673090-K<br>
+            <span style="font-weight: bold;">Powered</span> by Chew & Lim
+          </p>  
+          <br>        
+        </center>
+        </div>
+    </footer> 
+  </body>
+</html>

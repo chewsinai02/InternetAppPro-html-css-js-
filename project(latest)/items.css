@@ -1,0 +1,48 @@
+.list-group .active{
+  background-color: #dc3545;
+  color: white;
+  border: #dc3545;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s; /* Add transition for smooth effect */
+}
+
+.list-group .active:hover {
+  background-color:  #c82333; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+  text-decoration: none;
+  border: 1px solid  #c82333;
+}
+
+.col-md-4 .card{
+    height: 95%;
+  }
+
+/* Media query for tablet-sized screens */
+@media (min-width: 768px) {
+    .card-body .h5 {
+      height: 75px;
+      overflow: hidden;
+    }
+}
+  
+@media (max-width: 768px) { 
+    .card-body .h5 {
+      /* Adjust the height for tablet screens */
+      height: 90px;
+      overflow: hidden;
+    }
+}
+
+
+.col-md-4 .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0;
+}
+
+.product-title{
+    margin: auto;
+}

@@ -1,0 +1,127 @@
+.card-group .card{
+    background-color: #dc3545;
+    color: white;
+    border-radius: 0;
+    font-family: Varela Round;
+}
+
+.card-group .card-title{
+  font-weight: bold;
+  margin-top: 10PX;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+    /* Apply right border on cards for big screens */
+    .card-group .card {
+        border: 0; 
+        border-right: 2px solid white;
+    }
+}
+
+@media (max-width: 766px) {
+    /* Apply bottom border on cards for small screens */
+    .card-group .card {
+        border: 0; 
+        border-top: 2px solid white;
+    }
+}  
+
+.text-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.go-top {
+    position: fixed;	        /* 设置fixed固定定位 */
+    z-index: 9999;      /*上下优先顺序*/
+    bottom: 25%;		/* 距离浏览器窗口下边框20px */
+    left: 20px;		/* 距离浏览器窗口右边框20px */
+}
+
+.go-top a {
+    display: block;			/* 将<a>标签设为块元素，用于美化样式 */
+    text-decoration: none;		/* 取消超链接下画线 */
+    color: white;			/* 设置文本颜色 */
+    background-color:#dc3545;		/* 设置背景颜色 */
+    border: 1px solid #dc3545;		/* 设置边框样式 */
+    padding: 10px 10px;			/* 设置内边距 */
+    border-radius: 5px;			/* 设置圆角矩形 */
+    letter-spacing: 2px;		/* 设置文字间距 */
+}
+
+.go-top a {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+  
+.go-top a:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 20;
+	right: 60px;
+	transition: 0.5s;
+}
+  
+.go-top:hover a {
+	padding-right: 30px;
+	transform: scale(1.2);
+}
+  
+.go-top:hover a:after {
+	opacity: 1;
+	right: 0;
+}
+.page-item a {
+    color: #dc3545;
+}
+.totalcart {
+    width: 100%;
+    height: 100px;
+    background-color: #f2f2f2;
+}
+.total {
+    font-size: 24px;
+}
+.go-total {
+    position: fixed;	        /* 设置fixed固定定位 */
+    z-index: 8888;      /*上下优先顺序*/
+    bottom: 0%;		/* 距离浏览器窗口下边框20px */
+    width: 100%;
+}
+.product-img{
+    height: 300px; 
+    width: 300px; 
+    border-radius:3%
+}
+
+
+.pagination {
+    text-align: center;
+}
+.pagination a {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 15px;
+    color: #dc3545;
+    background-color: aliceblue;
+    text-decoration: none;
+    border-radius: 15%;
+}
+.pagination a.active {
+    background-color: #dc3545;
+    color: white;
+}
+.hidden {
+    display: none;
+}
+.h75px{
+    height: 75px;
+}

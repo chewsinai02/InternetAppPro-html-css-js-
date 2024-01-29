@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    
+    <title>Compress Pictures</title>
+  </head>
+  <body>
+    <h1>Compress Pictures</h1><br>
+
+    <!-- Add the Upload Picture button -->
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col">
+          <input type="file" multiple class="my-image-field" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Display the original and compressed images -->
+    <div class="container mt-3">
+        <div class="col">
+            <h2>Original Images</h2>
+            <div id="original-images"></div>
+        </div>
+        <div class="col">
+            <h2>Compressed Images</h2>
+            <div id="compressed-images"></div>
+            <a id="download-all-link" href="#" download="compressed_images.zip" class="btn btn-primary mt-2">Download All Compressed Images</a>
+        </div>
+    </div>
+
+    <script>
+      const compressImage = async (file, { quality = 1, type = file.type }) => {
+        // Get as image data
+        const imageBitmap = await createImageBitmap(file);
+
+        // Draw to canvas
+        const canvas = document.createElement('canvas');
+        canvas.width = imageBitmap.width;
+        canvas.height = imageBitmap.height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(imageBitmap, 0, 0);
+
+        // Turn into Blob
+        const blob = await new Promise((resolve) =>
+          canvas.toBlob(resolve, type, quality)
+        );
+
+        // Turn Blob into File
+        return new File([blob], file.name, {
+          type: blob.type,
+        });
+      };
+
+      // Get the selected file from the file input
+      const input = document.querySelector('.my-image-field');
+      const originalImagesDiv = document.getElementById('original-images');
+      const compressedImagesDiv = document.getElementById('compressed-images');
+      const downloadAllLink = document.getElementById('download-all-link');
+
+      input.addEventListener('change', async (e) => {
+        // Get the files
+        const { files } = e.target;
+
+        // No files selected
+        if (!files.length) return;
+
+        // Create a zip file to store the compressed images
+        const zip = new JSZip();
+
+        // For every file in the files list
+        for (const file of files) {
+        // We don't have to compress files that aren't images
+        if (!file.type.startsWith('image')) {
+            continue;
+        }
+
+        // Display the original image
+        const originalImage = document.createElement('img');
+        originalImage.src = URL.createObjectURL(file);
+        originalImage.style.maxWidth = '50%'; // Set max width to 50%
+        originalImagesDiv.appendChild(originalImage);
+
+        // We compress the file by 50%
+        const compressedFile = await compressImage(file, {
+            quality: 0.5,
+            type: 'image/jpeg',
+        });
+
+        // Save the compressed file in the zip
+        const compressedFileName = `${file.name.replace(/\.[^/.]+$/, '')}_compressed.jpg`;
+        zip.file(compressedFileName, compressedFile);
+
+        // Display the compressed image
+        const compressedImage = document.createElement('img');
+        compressedImage.src = URL.createObjectURL(compressedFile);
+        compressedImage.style.maxWidth = '50%'; // Set max width to 50%
+        compressedImagesDiv.appendChild(compressedImage);
+        }
+
+        // Generate the zip file and provide the download link
+        zip.generateAsync({ type: 'blob' }).then((content) => {
+        const zipBlob = new Blob([content]);
+        downloadAllLink.href = URL.createObjectURL(zipBlob);
+        });
+    });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+  </body>
+</html>

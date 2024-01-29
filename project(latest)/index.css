@@ -1,0 +1,47 @@
+.carousel-inner .carousel-item img {
+  max-height: 100%; /* Set the maximum height of the image to fill the carousel item */
+  width: 100%; /* Let the width adjust automatically to maintain the image's aspect ratio */
+}
+
+.container-fluid {
+  position: relative;
+}
+
+/* Default height for carousel items */
+.carousel-inner > .carousel-item {
+  height: auto;
+}
+
+/* Media query for screens with a minimum width of 768px */
+@media only screen and (min-width: 768px) {
+  .carousel-inner > .carousel-item {
+    height: 80vh; /* Set a fixed height for carousel items on larger screens */
+  }
+
+  .carousel-inner > .carousel-item img {
+    height: auto; /* Allow image height to adjust automatically */
+    position: absolute;
+    top: 0;
+    width: 100%; /* Make images cover the entire width */
+  }
+}
+  
+.text-button {
+  text-align: center; /* Center the button horizontally */
+}
+
+.text-button a {
+  display: inline-block; /* Display the button as inline-block */
+  background-color: pink;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 0;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.text-button a:hover {
+  background-color: hotpink;
+}
